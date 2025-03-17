@@ -1,2 +1,2 @@
 # RHCSA_notes
-Notes for RHCSA 9 exam
+Notes for the RHCSA 9 exam
