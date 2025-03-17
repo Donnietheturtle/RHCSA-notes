@@ -58,6 +58,7 @@
    * Configure hostname resolution
    * Configure network services to start automatically at boot
    * Restrict network access using firewall-cmd/firewall
+
 **Manage users and groups**
    * Create, delete, and modify local user accounts
    * Change passwords and adjust password aging for local user accounts
