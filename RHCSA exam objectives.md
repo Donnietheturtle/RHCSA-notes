@@ -1,21 +1,21 @@
 **Understand and use essential tools**
-    * Access a shell prompt and issue commands with correct syntax  
-    * Use input-output redirection (>, >>, |, 2>, etc.)  
-    * Use grep and regular expressions to analyze text  
-    * Access remote systems using SSH  
-    * Log in and switch users in multiuser targets  
-    * Archive, compress, unpack, and uncompress files using tar, gzip, and bzip2  
-    * Create and edit text files  
-    * Create, delete, copy, and move files and directories  
-    * Create hard and soft links  
-    * List, set, and change standard ugo/rwx permissions  
-    * Locate, read, and use system documentation including man, info, and files in /usr/share/doc  
-**Create simple shell scripts**
+   * Access a shell prompt and issue commands with correct syntax  
+   * Use input-output redirection (>, >>, |, 2>, etc.)  
+   * Use grep and regular expressions to analyze text  
+   * Access remote systems using SSH  
+   * Log in and switch users in multiuser targets  
+   * Archive, compress, unpack, and uncompress files using tar, gzip, and bzip2  
+   * Create and edit text files  
+   * Create, delete, copy, and move files and directories  
+   * Create hard and soft links  
+   * List, set, and change standard ugo/rwx permissions  
+   * Locate, read, and use system documentation including man, info, and files in /usr/share/doc
+#**Create simple shell scripts**
     * Conditionally execute code (use of: if, test, [], etc.)
     * Use Looping constructs (for, etc.) to process file, command line input
     * Process script inputs ($1, $2, etc.)
     * Processing output of shell commands within a script
-**Operate running systems**
+#**Operate running systems**
     * Boot, reboot, and shut down a system normally
     * Boot systems into different targets manually
     * Interrupt the boot process in order to gain access to a system
@@ -26,7 +26,7 @@
     * Preserve system journals
     * Start, stop, and check the status of network services
     * Securely transfer files between systems
-**Configure local storage**
+#**Configure local storage**
     * List, create, delete partitions on MBR and GPT disks
     * Create and remove physical volumes
     * Assign physical volumes to volume groups
