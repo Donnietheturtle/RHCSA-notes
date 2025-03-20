@@ -60,4 +60,55 @@
 	- bzip2: tar -c**j**f file.tar /home
 
 #### Create and edit text files
+- Vim commands:
+    - **i**: Switch to input mode at the cursor
+    - **a**: Switch to input mode after the cursor
+    - **o**: Opens a new line below the cursor and enters input mode
+    - **:wq**: Writes the current file and quits
+    - **:q!** Quits the file without applying changes
+    - **:w filename**: Writes the current file with a new filename
+    - **dd**: Deltese the current line and places the contents into memory
+    - **yy**: Copies the current line
+    - **p**: Pastes the content
+    - **v**: Enters visual mode
+    - **u**: Undoes the last command
+    - **Ctrl-r**: Redoes the last undo
+    - **gg**: Moves cursor to first line in the file
+    - **G**: Moves cursor to the last line in the file
+    - **/text**: Searches for text from the current cursors position forward
+    - **?text**: Searches for text from the current cursors position backward
+    - **^**: Goes to the first position in the current line
+    - **$**: Goes to the last position in the current line
+    - **!ls**: Adds the output of ls (or any other command) in the current file
+    - **:%s/old/new/g**: Replaces all occurrences of old with new
 
+#### Create, delete, copy, and move files and directories
+- Wildcards:
+	- \*: Refers to unlimited numbers of characters (EX: ls user*)
+	- **?**: Refers to one character (EX: ls c?t)
+	- **[auo]**: Refers to one character inside of the brackets (EX: ls c[auo]t)
+- mkdir
+- rm -r files
+- cp [path-to-file] [path-to-destination]
+	- By default hidden files are not copied when using cp command
+		- cp /somedir/.* /tmp: Copies all files which have a name starting with a dot (Need to use -R if you want to copy hidden directories)
+		- cp -a /somedir/ . : Copies the entire directory including its contents to the current directory
+		- cp -a /somedir/. . : Copies all files including hidden ones to the current directory
+- mv [file] [directory]
+
+#### Create hard and soft links
+- **Hard links**: Every file always has one hard link, which is the name of the file 
+	- If one hard link is removed the other one is not effected
+	- Allows you to keep the contents the same for two files in multiple locations
+	- You can not create hard links to directories
+	- EX: ln /etc/hosts /tmp
+- **Soft links (Symbolic links)**: 
+	- Link to the name of the file, but not directly to the inode
+	- If the original file is removed, the symbolic link is invalid
+	- Can link to directories and files on other devices
+	- EX: ln -s /home /tmp
+
+##### List, set, and change standard ugo/rwx permissions 
+
+
+#### Locate, read, and use system documentation including man, info, and files in /usr/share/doc
