@@ -40,9 +40,9 @@
 - Rsync: rsync [OPTION...] SRC... [DEST]
 
 #### Log in and switch users in multiuser targets
-- su - user : Login as a different user
-- su - : Prompt for root password to login 
-- sudo -i : Login as root for authorized users only and runs the shell specified by the target user's password database entry as a login shell 
+- **su - user** : Login as a different user
+- **su -** : Prompt for root password to login 
+- **sudo -i** : Login as root for authorized users only and runs the shell specified by the target user's password database entry as a login shell 
 - Virtual consoles **Ctrl-Alt-F[1-6]** in a GUI enviroment or **chvt #** to change between them
 - F1: Access to the GNOME DIsplay Manager graphical login
 - F2: Access to the current graphical console
