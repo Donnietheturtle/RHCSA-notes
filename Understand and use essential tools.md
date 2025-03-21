@@ -41,8 +41,8 @@
 
 #### Log in and switch users in multiuser targets
 - su - user : Login as a different user
-- su - : Prompt for root password to 
-- sudo -i : Login as root for authorized users only and does not require the user to enter the root password
+- su - : Prompt for root password to login 
+- sudo -i : Login as root for authorized users only and runs the shell specified by the target user's password database entry as a login shell 
 - Virtual consoles **Ctrl-Alt-F[1-6]** in a GUI enviroment or **chvt #** to change between them
 - F1: Access to the GNOME DIsplay Manager graphical login
 - F2: Access to the current graphical console
@@ -87,7 +87,7 @@
 	- \*: Refers to unlimited numbers of characters (EX: ls user*)
 	- **?**: Refers to one character (EX: ls c?t)
 	- **[auo]**: Refers to one character inside of the brackets (EX: ls c[auo]t)
-- mkdir
+- mkdir directory
 - rm -r files
 - cp [path-to-file] [path-to-destination]
 	- By default hidden files are not copied when using cp command
@@ -100,7 +100,7 @@
 - **Hard links**: Every file always has one hard link, which is the name of the file 
 	- If one hard link is removed the other one is not effected
 	- Allows you to keep the contents the same for two files in multiple locations
-	- You can not create hard links to directories
+	- Can not create hard links to directories
 	- EX: ln /etc/hosts /tmp
 - **Soft links (Symbolic links)**: 
 	- Link to the name of the file, but not directly to the inode
@@ -125,7 +125,7 @@
     - 5: File formats and conventions
     - 8: System administration commands
 - Update mandb database with **sudo mandb**
-- Info or pinfo:
+- **Info or pinfo**:
     - Some commands have the main documentation in the info system
     - Pinfo is easier to parse information
-- /usr/share/doc: Used for services and more complicated systems such as rsyslog, bind, Kerberos, and OpenSSL 
+- **/usr/share/doc**: Used for services and more complicated systems such as rsyslog, bind, Kerberos, and OpenSSL 
