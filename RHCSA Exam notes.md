@@ -21,10 +21,10 @@
 
 #### Use grep and regular expressions to analyze text
 - man -k passwd | grep 8
-- grep **^**bob /etc/passwd (Shows lines which start with bob)
-- grep **$**ash /etc/passwd (Shows lines which end with ash)
+- grep ^bob /etc/passwd (Shows lines which start with bob)
+- grep $ash /etc/passwd (Shows lines which end with ash)
 - grep -v '^#' /etc/services -B 5 (Shows lines which do not start with a # sign, but also the five lines directly before each of those lines)
-- grep -v -e '^#' -e '^$'/etc/service (Excludes all blank lines and lines which start with #)
+- grep -v -e '^#' -e '^$' /etc/service (Excludes all blank lines and lines which start with #)
 - awk -F : '/user/ {print $4}' /etc/passwd (Searches the /etc/passwd for the text *user* and will print the fourth field of any matching line) 
 - sed -n 5p /etc/passwd (Print the fifth line from the /etc/passwd file)
 - sed -i s/old-text/new-text/g ~/myfile (Replaces all occurrences of old-text with new-text in ~/myfile; -i writes result to file)
@@ -108,7 +108,24 @@
 	- Can link to directories and files on other devices
 	- EX: ln -s /home /tmp
 
-##### List, set, and change standard ugo/rwx permissions 
-
+#### List, set, and change standard ugo/rwx permissions 
+- Permission: Numeric Representation
+    - Read: 4
+    - Write: 2
+    - Execute: 1
+- chmod 744 file
+- chmod g+w,o-r file
+- Apply subdirectories recursively: Use (uppercase X) chmod -R a+**X** files instead of chmod -R a+x
 
 #### Locate, read, and use system documentation including man, info, and files in /usr/share/doc
+- Use **--help** when you want a quick overview of the command
+- Use **apropos** or **man -k** to search through the short summaries of the mandb database
+- Man pages categorization:
+    - 1: Executable programs or shell commands
+    - 5: File formats and conventions
+    - 8: System administration commands
+- Update mandb database with **sudo mandb**
+- Info or pinfo:
+    - Some commands have the main documentation in the info system
+    - Pinfo is easier to parse information
+- /usr/share/doc: Used for services and more complicated systems such as rsyslog, bind, Kerberos, and OpenSSL 
