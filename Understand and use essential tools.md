@@ -23,6 +23,8 @@
 - man -k passwd | grep 8
 - grep ^bob /etc/passwd (Shows lines which start with bob)
 - grep $ash /etc/passwd (Shows lines which end with ash)
+- grep 'b.\*t' regex.txt (Shows any line which starts with 'b' and ends in a 't')
+- grep -E 'b.+t' regex.txt (Shows any lines which have at least 3 characters)
 - grep -v '^#' /etc/services -B 5 (Shows lines which do not start with a # sign, but also the five lines directly before each of those lines)
 - grep -v -e '^#' -e '^$' /etc/service (Excludes all blank lines and lines which start with #)
 - awk -F : '/user/ {print $4}' /etc/passwd (Searches the /etc/passwd for the text *user* and will print the fourth field of any matching line) 
