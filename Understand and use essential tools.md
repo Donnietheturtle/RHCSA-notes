@@ -29,6 +29,7 @@
 - grep -v -e '^#' -e '^$' /etc/service (Excludes all blank lines and lines which start with #)
 - awk -F : '/user/ {print $4}' /etc/passwd (Searches the /etc/passwd for the text *user* and will print the fourth field of any matching line) 
 - sed -n 5p /etc/passwd (Print the fifth line from the /etc/passwd file)
+- sed -i -e '$a \gpgcheck=0' /etc/yum.repos.d/repo_BaseOS.repo (Appends 'gpgcheck=0 to the end of the file)
 - sed -i s/old-text/new-text/g ~/myfile (Replaces all occurrences of old-text with new-text in ~/myfile; -i writes result to file)
 - sed -i -e '2d;20,25d' ~/myfile (Deletes lines 2 and 20-25 in ~/myfile)
 
